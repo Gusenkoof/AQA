@@ -33,6 +33,7 @@ public class Test {
         driver.findElement(By.id("address_color")).sendKeys("#B00C0C");
         driver.findElement(By.cssSelector("input[id='address_age']")).sendKeys("34");
         driver.findElement(By.name("address[website]")).sendKeys("http://krajkx.by");
+        driver.findElement(By.id("address_picture")).sendKeys("C:\\test\\1.png");
         driver.findElement(By.xpath("//input[@type='tel']")).sendKeys("+375255123070");
         driver.findElement(By.id("address_interest_climb")).click();
         driver.findElement(By.name("address[note]")).sendKeys("Frend");
@@ -56,9 +57,10 @@ public class Test {
         //5 тест - Выход пользователя
         driver.findElement(By.cssSelector("a[data-test='sign-out']")).click();
 
-        
         Thread.sleep(5000);
         driver.close();
         driver.quit();
+
     }
+
 }
